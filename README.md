@@ -8,8 +8,6 @@
 <img src="./assets/top.gif" width="880">
 </p>
 
-**Segment and Track Anything** is an open-source project that focuses on the segmentation and tracking of any objects in videos, utilizing both automatic and interactive methods. The primary algorithms utilized include the [**SAM** (Segment Anything Models)](https://github.com/facebookresearch/segment-anything) for automatic/interactive key-frame segmentation and the [**DeAOT** (Decoupling features in Associating Objects with Transformers)](https://github.com/yoxu515/aot-benchmark) (NeurIPS2022) for efficient multi-object tracking and propagation. The SAM-Track pipeline enables dynamic and automatic detection and segmentation of new objects by SAM, while DeAOT is responsible for tracking all identified objects.
-
 ## :loudspeaker:New Features
 - [2023/5/12] We have authored a technical report for SAM-Track.
 - [2023/5/7] We have added `demo_instseg.ipynb`, which uses Grounding-DINO to detect new objects in the key frames of a video. It can be applied in the fields of smart cities and autonomous driving.
@@ -113,10 +111,6 @@ This video showcases the segmentation and tracking capabilities of SAM-Track in 
 ## :computer:Getting Started
 ### :bookmark_tabs:Requirements
 
-The [Segment-Anything](https://github.com/facebookresearch/segment-anything) repository has been cloned and renamed as sam, and the [aot-benchmark](https://github.com/yoxu515/aot-benchmark) repository has been cloned and renamed as aot.
-
-Please check the dependency requirements in [SAM](https://github.com/facebookresearch/segment-anything) and [DeAOT](https://github.com/yoxu515/aot-benchmark).
-
 The implementation is tested under python 3.9, as well as pytorch 1.10 and torchvision 0.11. **We recommend equivalent or higher pytorch version**.
 
 Use the `install.sh` to install the necessary libs for SAM-Track
@@ -160,20 +154,6 @@ SegTracker-Parameters:
  - **max_obj_num**: used to limit the maximum number of objects that SAM-Track can detect and track. A larger number of objects necessitates a greater utilization of memory, with approximately 16GB of memory capable of processing a maximum of 255 objects.
 
 Usage: To see the details, please refer to the [tutorial for 1.0-Version WebUI](./tutorial/tutorial%20for%20WebUI-1.0-Version.md).
-
-### :school:About us
-Thank you for your interest in this project. The project is supervised by the ReLER Lab at Zhejiang University’s College of Computer Science and Technology. ReLER was established by Yang Yi, a Qiu Shi Distinguished Professor at Zhejiang University. Our dedicated team of contributors includes [Yangming Cheng](https://github.com/yamy-cheng), [Yuanyou Xu](https://github.com/yoxu515), [Liulei Li](https://github.com/lingorX), [Xiaodi Li](https://github.com/LiNO3Dy), [Zongxin Yang](https://z-x-yang.github.io/), [Wenguan Wang](https://sites.google.com/view/wenguanwang) and [Yi Yang](https://scholar.google.com/citations?user=RMSuNFwAAAAJ&hl=en).
-
-### :full_moon_with_face:Credits
-Licenses for borrowed code can be found in [licenses.md](https://github.com/z-x-yang/Segment-and-Track-Anything/blob/main/licenses.md) file. 
-
-* DeAOT/AOT - [https://github.com/yoxu515/aot-benchmark](https://github.com/yoxu515/aot-benchmark)
-* SAM - [https://github.com/facebookresearch/segment-anything](https://github.com/facebookresearch/segment-anything)
-* Gradio (for building WebUI) - [https://github.com/gradio-app/gradio](https://github.com/gradio-app/gradio)
-* Grounding-Dino - [https://github.com/yamy-cheng/GroundingDINO](https://github.com/yamy-cheng/GroundingDINO)
-
-### License
-The project is licensed under the [AGPL-3.0 license](https://github.com/z-x-yang/Segment-and-Track-Anything/blob/main/LICENSE.txt). To utilize or further develop this project for commercial purposes through proprietary means, permission must be granted by us (as well as the owners of any borrowed code).
 
 ### Citations
 Please consider citing the related paper(s) in your publications if it helps your research.
